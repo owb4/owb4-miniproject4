@@ -22,6 +22,9 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/user/{user_id}/profile', 'ProfileController@create')->name('profile.create');
 Route::get('/user/{user_id}/profile/{profile_id}', 'ProfileController@show')->name('profile.show');
 
+Route::get('/questions/{question_id}/answers/create', 'AnswerController@create')->name('answers.create');
+Route::get('/questions/{question_id}/answers/{answer_id}', 'AnswerController@show')->name('answers.show');
+
 Route::resources([
     'questions' => 'QuestionController',
 ]);
