@@ -32,3 +32,4 @@ Route::get('/questions/{question_id}/answers/{answer_id}', 'AnswerController@sho
 Route::resources([
     'questions' => 'QuestionController',
 ]);
+Route::delete('/questions/{question_id}', 'QuestionController@destroy')->name('questions.destroy');
